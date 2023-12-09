@@ -17,11 +17,11 @@ ConfigModule.forRoot();
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: '1234',
-      database: 'drconsulta',
+      host: process.env.HOST,
+      port: Number(process.env.PORT),
+      username: process.env.USERNAME_DATABASE,
+      password: process.env.PASSWORD_DATABASE,
+      database: process.env.DATABASE,
       entities: [
         EstablishmentEntity,
         VehicleEntity,
