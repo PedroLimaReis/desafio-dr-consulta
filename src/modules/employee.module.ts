@@ -4,6 +4,7 @@ import { EmployeeService } from '../services/employee.service';
 import { EmployeeController } from '../controllers/employee.constroller';
 import { EmployeeEntity } from '../entities/employee.entity';
 import { JwtModule } from '@nestjs/jwt';
+// import { AuthGuard } from '../services/auth.guard';
 
 @Module({
   imports: [

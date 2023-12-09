@@ -1,11 +1,11 @@
-import { Body, Controller, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { EmployeeService } from '../services/employee.service';
 import { EmployeeEntity } from '../entities/employee.entity';
 import { CreateEmployeeBody } from 'src/dtos/create-employee-body';
 import { hashSync } from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
 import 'dotenv';
-import { AuthGuard } from 'src/services/auth.guard';
+// import { AuthGuard } from 'src/services/auth.guard';
 
 @Controller('employee')
 export class EmployeeController {
@@ -14,7 +14,7 @@ export class EmployeeController {
     private jwtService: JwtService,
   ) {}
 
-  @UseGuards(AuthGuard)
+  // @UseGuards(AuthGuard)
   @Post('create')
   async createEmployee(
     @Body() body: CreateEmployeeBody,
