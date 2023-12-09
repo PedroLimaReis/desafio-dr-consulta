@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './modules/auth.module';
 import { EstablishmentEntity } from './entities/establishment.entity';
 import { VehicleEntity } from './entities/vehicle.entity';
 import { EstablishmentModule } from './modules/establishment.module';
@@ -33,6 +34,7 @@ ConfigModule.forRoot();
     VehicleModule,
     ReservationModule,
     EmployeeModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
