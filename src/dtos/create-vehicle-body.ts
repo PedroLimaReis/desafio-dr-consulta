@@ -19,7 +19,4 @@ export class VehicleCreateBody {
     moto: 'Moto',
   })
   type: string;
-
-  @IsNotEmpty()
-  cnpj: string;
 }

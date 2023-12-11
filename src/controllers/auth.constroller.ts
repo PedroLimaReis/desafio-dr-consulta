@@ -35,6 +35,8 @@ export class AuthController {
         secret: process.env.JWT,
         expiresIn: '60s',
       }),
+      username: userExist.name,
+      userId: userExist.id,
     };
   }
 
